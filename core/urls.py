@@ -18,11 +18,12 @@ from django.contrib import admin
 
 from rest_framework.routers import DefaultRouter
 
-from lists.views import ListViewSet
+from lists.views import ListViewSet, ItemViewSet
 
 
 router = DefaultRouter()
 router.register(r'lists', ListViewSet)
+router.register(r'items', ItemViewSet)
 
 urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),

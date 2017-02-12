@@ -7,6 +7,7 @@ class ListSerializer(serializers.ModelSerializer):
         model = List
         fields = '__all__'
 
+
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item

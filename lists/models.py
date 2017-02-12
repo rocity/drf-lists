@@ -6,6 +6,7 @@ class List(models.Model):
     description = models.TextField(blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
 
+
 class Item(models.Model):
     ACTIVE = 1
     DONE = 2
@@ -14,7 +15,7 @@ class Item(models.Model):
         (ACTIVE, 'Active'),
         (DONE, 'Done'),
         (DELETED, 'Deleted')
-        )
+    )
 
     list = models.ForeignKey(List)
     name = models.CharField(max_length=255)
